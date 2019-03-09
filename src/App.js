@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import HelloWorld from './components/HelloWorld'
 
-function App () {
+export default function App () {
     return <HelloWorld />
 }
 
-export default App
+ 
