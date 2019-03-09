@@ -26,7 +26,7 @@ export default function HelloWorld (props) {
       onChange={event => changeLightness(event.target.value)}/>
       </section>
     </section>
-    <p>HSL: () </p>
+    <p>HSL: ({hue},{saturation}%,{lightness}%) </p>
     </header>
     <section className="middle">
     <button className="save-color">Remember Color</button>
