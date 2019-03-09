@@ -6,6 +6,11 @@ export default function HelloWorld (props) {
   const [lightness, changeLightness] = useState(0)
   const [save, savedColor] = useState ([])
 
+  const randomHSL = () => {
+    changeHue(Math.floor(Math.random() * 360))
+    changeSaturation(Math.floor(Math.random() * 100))
+    changeLightness(Math.floor(Math.random() * 100))
+  }
   const saveColor = () => {
     savedColor(prevSave => prevSave.concat(`hsl(${hue},${saturation}%,${lightness}%)`))
   }
@@ -35,7 +40,7 @@ export default function HelloWorld (props) {
     </header>
     <section className="middle">
     <button className="save-color" onClick={() => saveColor()}>Remember Color</button>
-    <button>Random Color</button>
+    <button onClick={() => randomHSL()}>Random Color</button>
     </section>
     <section className="saved-list">
     <h2>Saved Colors:</h2>
